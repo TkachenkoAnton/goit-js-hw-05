@@ -1,5 +1,27 @@
- // Write code under this line
+class Storage {
+    constructor(items) {
+        this.items = items
+    }
 
+    getItems() {
+        return this.items
+    }
+
+    addItem(newItem) {
+        this.items.push(newItem)
+    }
+   
+    removeItem(itemRem) {
+            for (let i = 0; i < this.items.length; i += 1) {
+                const remItemIndex = this.items.indexOf(itemRem)
+                const arrItem = this.items[i]
+                
+            if (arrItem === itemRem) {
+                this.items.splice(remItemIndex, 1);
+            }
+        }
+    }
+}
 
 // console.log(typeof Storage);
 // 'function'
@@ -11,9 +33,9 @@ const goods = [
   'Антигравитатор'
 ];
 
-// const storage = new Storage(goods);
+const storage = new Storage(goods);
 
-// console.log(storage.getItems());
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Пролонгер',
@@ -21,8 +43,8 @@ const goods = [
   'Антигравитатор'
 ] */
 
-// storage.addItem('Дроид');
-// console.log(storage.getItems());
+storage.addItem('Дроид');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Пролонгер',
@@ -31,8 +53,8 @@ const goods = [
   'Дроид'
 ] */
 
-// storage.removeItem('Пролонгер');
-// console.log(storage.getItems());
+storage.removeItem('Нанитоиды');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Железные жупи',
