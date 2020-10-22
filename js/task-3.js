@@ -38,8 +38,8 @@ const storage = new Storage(goods);
   'Антигравитатор'
 ] */
 
-  storage.addItem('Дроид');
-console.log(storage.getItems());
+// storage.addItem('Дроид');
+// console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Пролонгер',
@@ -48,8 +48,8 @@ console.log(storage.getItems());
   'Дроид'
 ] */
 
-storage.removeItem('Пролонгер');
-console.log(storage.getItems());
+// storage.removeItem('Пролонгер');
+// console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Железные жупи',
