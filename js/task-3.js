@@ -12,16 +12,11 @@ class Storage {
     }
    
     removeItem(itemRem) {
-            for (let i = 0; i < this.items.length; i += 1) {
-                const remItemIndex = this.items.indexOf(itemRem)
-                const arrItem = this.items[i]
-                
-            if (arrItem === itemRem) {
-                this.items.splice(remItemIndex, 1);
-            }
-        }
+      const remItemIndex = this.items.indexOf(itemRem);
+      return this.items.splice(remItemIndex, 1);
     }
 }
+
 
 // console.log(typeof Storage);
 // 'function'
@@ -43,8 +38,8 @@ const storage = new Storage(goods);
   'Антигравитатор'
 ] */
 
-// storage.addItem('Дроид');
-// console.log(storage.getItems());
+  storage.addItem('Дроид');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Пролонгер',
@@ -53,8 +48,8 @@ const storage = new Storage(goods);
   'Дроид'
 ] */
 
-// storage.removeItem('Пролонгер');
-// console.log(storage.getItems());
+storage.removeItem('Пролонгер');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Железные жупи',
